@@ -1,0 +1,69 @@
+.img-slider{
+    position: relative;
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.img-slider img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-slider:hover .overlay{
+    opacity: 1;
+}
+.img-slider:hover .overlay{
+    opacity: 1;
+    transition: 0.5s ease-in;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+}
+
+.carousel-control-next , .carousel-control-prev{
+    width: 10%;
+}
+
+.carousel-control-prev-icon , .carousel-control-next-icon{
+    position: relative;
+    top: 3px;
+}
+
+.img-about{
+    width: 70%;
+    max-height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 50px 0 50px 0;
+    border: 4px solid #333;
+
+}
+
+.project-section{
+    background-color: #529ABB;
+}
+
+.project-section .card .card-body{
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.project-section .slider-project{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-section .slider-project .card{
+    border-radius: 15px;
+    padding-top: 25px;
+}
