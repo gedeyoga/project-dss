@@ -24,20 +24,7 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-	<!-- <div class="menu-area">
-		<div id="dl-menu" class="dl-menuwrapper">
-			<button class="dl-trigger">Open Menu</button>
-			<ul class="dl-menu">
-				<li>
-					<a href="#intro">Home</a>
-				</li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#penerimaan">Penerimaan</a></li>
-				<li><a href="#galeri">Galeri</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
-		</div>
-	</div>	 -->
+	
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand scroll-page" href="#">Kuvukiland Tech</a>
