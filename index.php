@@ -44,7 +44,7 @@ if (isset($_SESSION['user'])) {
 					<a class="nav-link scroll-page" href="#penerimaan">Penerimaan</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link scroll-page" href="#galeri">Galeri</a>
+					<a class="nav-link scroll-page" href="#projectkami">Project Kami</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link scroll-page" href="#contact">Contact</a>
@@ -87,6 +87,7 @@ if (isset($_SESSION['user'])) {
 		</div>
 
 	</div>
+	
 
 
 
@@ -178,7 +179,7 @@ if (isset($_SESSION['user'])) {
 		</div>
 	</section>
 
-	<section class="project-section py-5">
+	<section id="projectkami"class="project-section py-5">
 		<h2 class="mb-5 text-white">Project Kami</h2>
 		<div class="slider-project">
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
