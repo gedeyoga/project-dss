@@ -5,7 +5,7 @@
 
 		function bukaKoneksi(){
 			try{
-				$this->koneksi = new PDO("mysql:host=localhost;dbname=latihan_dss","root","", array(PDO::ATTR_PERSISTENT=>TRUE));
+				$this->koneksi = new PDO("mysql:host=localhost;dbname=0skr_pegawai","root","", array(PDO::ATTR_PERSISTENT=>TRUE));
 			}catch(PDOException $e){
 				echo $e->getMessage();
 			}
