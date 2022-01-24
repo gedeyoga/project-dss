@@ -112,7 +112,11 @@ Home sections
 ================================= */
 
 .home-section {
-	position: relative;
+	width: 100%;
+	padding: 90px 0px 150px 0px;
+}
+
+.minimal{
 	min-height: 768px;
 }
 
