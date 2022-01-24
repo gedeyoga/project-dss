@@ -25,7 +25,7 @@ if (isset($_SESSION['user'])) {
 
 <body>
 	
-
+	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand scroll-page" href="#">Kuvukiland Tech</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,16 +38,16 @@ if (isset($_SESSION['user'])) {
 					<a class="nav-link scroll-page" href="#intro">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link scroll-page" href="#about">About</a>
+					<a class="nav-link scroll-page" href="#about">Tentang</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link scroll-page" href="#penerimaan">Penerimaan</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link scroll-page" href="#projectkami">Project Kami</a>
+					<a class="nav-link scroll-page" href="#projectkami">Projek Kami</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link scroll-page" href="#contact">Contact</a>
+					<a class="nav-link scroll-page" href="#contact">Kontak</a>
 				</li>
 			</ul>
 		</div>
@@ -71,12 +71,12 @@ if (isset($_SESSION['user'])) {
 							<?php
 							if (isset($_SESSION['user'])) {
 							?>
-								<button type="button" class="btn btn-success btn-lg">My Profile</button>
+								<button type="button" class="btn btn-secondarry btn-lg">Profile Saya</button>
 							<?php
 							} else {
 							?>
-								<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalRegister">Register</button>
-								<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModalLogin">Login</button>
+								<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalRegister">Daftar</button>
+								<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModalLogin">Login</button>
 							<?php
 							}
 							?>
@@ -97,8 +97,8 @@ if (isset($_SESSION['user'])) {
 		<div class="container">
 			<div style="margin-top: -50px;" class="card pb-5">
 				<div class="card-body">
-					<h2 class="my-5">About us</h2>
-					<div class="row">
+					<h2 class="my-5">Tentang Kita</h2>
+					<div class="row lead wow fadeInDown" data-wow-delay="1">
 						<div class="col-md-6 col-lg-6">
 							<div class="img-about">
 								<img src="img/works/project/Wolf.jpg" alt="">
@@ -124,17 +124,17 @@ if (isset($_SESSION['user'])) {
 			<div class="row">
 				<div class="col-md-12">
 					<div class="color-light">
-						<h2 class="wow bounceInDown" data-wow-delay="1s">Partnership, Leadership, Battleship, Pokoknyaship</h2>
-						<p class="lead wow bounceInUp" data-wow-delay="2s">Merdeka atau Mati</p>
+						<h2 class="wow fadeInDown" data-wow-delay="1s">Mitra Kerja dan Kepemimpinan</h2>
+						<p class="lead wow fadeInUp" data-wow-delay="1.5s">Selalu Melakukan Yang Terbaik Untuk Masa Depan</p>
 						<?php
 						if (isset($_SESSION['user'])) {
 						?>
-							<button type="button" class="btn btn-success btn-lg lead wow bounceInUp" data-wow-delay="1s">My Profile</button>
+							<button type="button" class="btn btn-info btn-lg lead wow fadeInUp" data-wow-delay="1s">Profile Saya</button>
 						<?php
 						} else {
 						?>
-							<button type="button" class="btn btn-primary btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalRegister">Register</button>
-							<button type="button" class="btn btn-info btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalLogin">Login</button>
+							<button type="button" class="btn btn-primary btn-lg lead wow fadeInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalRegister">Register</button>
+							<button type="button" class="btn btn-success btn-lg lead wow fadeInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalLogin">Login</button>
 						<?php
 						}
 						?>
@@ -179,6 +179,7 @@ if (isset($_SESSION['user'])) {
 		</div>
 	</section>
 
+	<!-- Galeri -->
 	<section id="projectkami"class="project-section py-5">
 		<h2 class="mb-5 text-white">Project Kami</h2>
 		<div class="slider-project">
@@ -253,17 +254,17 @@ if (isset($_SESSION['user'])) {
 			<div class="row">
 				<div class="col-md-12">
 					<div class="color-light">
-						<h2 class="wow bounceInDown" data-wow-delay="1s">World Class Cyber Company</h2>
-						<p class="lead wow bounceInUp" data-wow-delay="2s">Come Join to Our Team</p>
+						<h2 class="wow fadeInDown" data-wow-delay="1s">Perusahaan Cyber Kelas Dunia</h2>
+						<p class="lead wow fadeInUp" data-wow-delay="2s">Bergabunglah Berasama Kita</p>
 						<?php
 						if (isset($_SESSION['user'])) {
 						?>
-							<button type="button" class="btn btn-success btn-lg lead wow bounceInUp" data-wow-delay="1s">My Profile</button>
+							<button type="button" class="btn btn-secondary btn-lg lead wow fadeInUp" data-wow-delay="1s">My Profile</button>
 						<?php
 						} else {
 						?>
-							<button type="button" class="btn btn-primary btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalRegister">Register</button>
-							<button type="button" class="btn btn-info btn-lg lead wow bounceInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalLogin">Login</button>
+							<button type="button" class="btn btn-primary btn-lg lead wow fadeInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalRegister">Register</button>
+							<button type="button" class="btn btn-success btn-lg lead wow fadeInUp" data-wow-delay="1s" data-toggle="modal" data-target="#myModalLogin">Login</button>
 						<?php
 						}
 						?>
@@ -341,6 +342,7 @@ if (isset($_SESSION['user'])) {
 		</div>
 	</section>
 
+	<!-- Modal Login -->
 	<div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -366,6 +368,7 @@ if (isset($_SESSION['user'])) {
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 
+	<!-- Modal Daftar -->
 	<div class="modal fade" id="myModalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -396,6 +399,7 @@ if (isset($_SESSION['user'])) {
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
 
+	<!-- Modal Syarat -->
 	<div class="modal fade" id="myModalSyarat" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -412,6 +416,8 @@ if (isset($_SESSION['user'])) {
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
+
+	<!-- Footer -->
 	<footer>
 		<div class="container">
 			<div class="row">
