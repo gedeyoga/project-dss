@@ -14,6 +14,7 @@
     <!-- css -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../css/style.css" rel="stylesheet" media="screen">
+	<link href="../css/custom.css" rel="stylesheet" media="screen">
 	<link href="../color/default.css" rel="stylesheet" media="screen">
 	<script src="../js/modernizr.custom.js"></script>
 	</head>
@@ -57,6 +58,8 @@
 		</div>
 	</nav>
 
+	<div class="home-section">
+
 	<?php
 		include "page.php";
 
@@ -67,11 +70,9 @@
 
 	}
 	?>
+		
+	</div>
 
-
-	</footer>
-	  
-	</body>
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -85,7 +86,9 @@
                 -->
 			</div>
 		</div>
+	</footer>
 
+	</body>
 	<!-- js -->
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.min.js"></script>

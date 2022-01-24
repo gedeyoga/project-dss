@@ -4,7 +4,7 @@
 ?>
 <!-- intro area -->	  
 	  <!-- About -->
-	  <section id="about" class="home-section bg-white">
+	  <section id="about" class="home-section">
 
 	  <?php
 	  	if(isset($_GET['penerimaan'])){
