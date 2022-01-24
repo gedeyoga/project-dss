@@ -43,72 +43,72 @@
 				  		$getP = $lowongan->GetData("where id_lowongan='$id_lowongan'");
 				  		$pen = $getP->fetch();
 				  	?>
-				  	<div class="row">
-				  <div class="col-md-offset-2 col-md-8">
-					<div class="section-heading">
-					 <h2>Lamar <?php echo $pen['lowongan']; ?> </h2> 
-					</div>
-					<h4>Upload Berkas</h4>
-					<table class="table" border="0">
+
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="section-heading">
+					<h2>Lamar <?php echo $pen['lowongan']; ?> </h2> 
+				</div>
+				<h4>Upload Berkas</h4>
+				<table class="table" border="0">
                 	<tbody>
-                	<?php
+						<?php
+							if(isset($_POST['submit'])){
+								$ar_kr = 1;
+								$rin = $lowongan_rinci->GetData("where id_lowongan = '$id_lowongan' and status_upload = '1' order by kriteria asc");
+								while($berkas = $rin->fetch()){
+									if(!empty($_FILES['fileberkas_' . $ar_kr]['tmp_name'])){
+										$explode = explode(".", $_FILES['fileberkas_' . $ar_kr]['name']);
+										$file = $id_user . "_" . $id_lowongan . "_" . $berkas['kriteria'] . "." . end($explode);
+										move_uploaded_file($_FILES['fileberkas_' . $ar_kr]['tmp_name'], "../upload/" . $file);
+									}else{
+										$get = $pelamar->GetData("where id_user='$id_user' and id_lowongan='$id_lowongan' and kriteria='$berkas[kriteria]'");
+										$data = $get->fetch();
 
-                		if(isset($_POST['submit'])){
-                			$ar_kr = 1;
-                			$rin = $lowongan_rinci->GetData("where id_lowongan = '$id_lowongan' and status_upload = '1' order by kriteria asc");
-                			while($berkas = $rin->fetch()){
-                				if(!empty($_FILES['fileberkas_' . $ar_kr]['tmp_name'])){
-									$explode = explode(".", $_FILES['fileberkas_' . $ar_kr]['name']);
-									$file = $id_user . "_" . $id_lowongan . "_" . $berkas['kriteria'] . "." . end($explode);
-									move_uploaded_file($_FILES['fileberkas_' . $ar_kr]['tmp_name'], "../upload/" . $file);
-								}else{
-									$get = $pelamar->GetData("where id_user='$id_user' and id_lowongan='$id_lowongan' and kriteria='$berkas[kriteria]'");
-									$data = $get->fetch();
+										$file = $data['file'];
+									}
 
-									$file = $data['file'];
+									$qry = $pelamar->UploadBerkas($file, $id_user, $id_lowongan, $berkas['kriteria']);
+
+									if($qry){
+										echo "<script language='javascript'>alert('Berkas berhasil diupload'); document.location='?page=penerimaan&lamar=$id_lowongan'</script>";
+									}else{
+										echo "<script language='javascript'>alert('Gagal');document.location='?page=penerimaan&lamar=$id_lowongan'</script>";
+									}
+									$ar_kr++;
 								}
+							}
+						?>
 
-								$qry = $pelamar->UploadBerkas($file, $id_user, $id_lowongan, $berkas['kriteria']);
+						<form action="" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<?php
+									$rin = $lowongan_rinci->GetData("where id_lowongan = '$id_lowongan' and status_upload = '1' order by kriteria asc");
+									$ar=1;
+									while($row = $rin->fetch()){
+										$qryBerkas = $pelamar->GetData("where id_user='$id_user' and id_lowongan='$id_lowongan' and kriteria='$row[kriteria]'");
+										$cekBerkas = $qryBerkas->fetch();
+										echo "<tr>
+												<td width=60%>$row[kriteria]</td>";
+										if($cekBerkas['file']==""){
+											echo "<td></td><td width=40%><input type='file' name='fileberkas_$ar'></td>";
+										}else{
+											echo "<td><a href='../upload/$cekBerkas[file]'>$cekBerkas[file]</a></td><td width=40%><input type='file' name='fileberkas_$ar'></td>";
+										}
 
-	  							if($qry){
-	  								echo "<script language='javascript'>alert('Berkas berhasil diupload'); document.location='?page=penerimaan&lamar=$id_lowongan'</script>";
-	  							}else{
-	  								echo "<script language='javascript'>alert('Gagal');document.location='?page=penerimaan&lamar=$id_lowongan'</script>";
-	  							}
-								$ar_kr++;
-                			}
-                		}
+										echo "</tr>";
+										$ar++;
+									}
+								?>
+							</div>
+					</tbody>
+				</table>
 
-                	?>
-                	<form action="" method="post" enctype="multipart/form-data">
-                	<div class="form-group">
-                <?php
-                	$rin = $lowongan_rinci->GetData("where id_lowongan = '$id_lowongan' and status_upload = '1' order by kriteria asc");
-                	$ar=1;
-                	while($row = $rin->fetch()){
-                		$qryBerkas = $pelamar->GetData("where id_user='$id_user' and id_lowongan='$id_lowongan' and kriteria='$row[kriteria]'");
-                		$cekBerkas = $qryBerkas->fetch();
-                		echo "<tr>
-                				<td width=60%>$row[kriteria]</td>";
-                		if($cekBerkas['file']==""){
-                			echo "<td></td><td width=40%><input type='file' name='fileberkas_$ar'></td>";
-                		}else{
-                			echo "<td><a href='../upload/$cekBerkas[file]'>$cekBerkas[file]</a></td><td width=40%><input type='file' name='fileberkas_$ar'></td>";
-                		}
-
-                		echo "</tr>";
-                		$ar++;
-                	}
-                ?>
-                </div>
-                	</tbody>
-                </table>
-                	<div class="form-group">
-                		<input type='submit' name='submit' value='Simpan' class="btn btn-primary">
-                	</div>
-                </form>
-
-				  </div>
+				<div class="form-group">
+							<input type='submit' name='submit' value='Simpan' class="btn btn-primary">
+							</div>
+               			</form>
+				</div>
 			  </div>
 				  	<?php
 
@@ -117,8 +117,8 @@
 				  		$getP = $lowongan->GetData("where id_lowongan='$id_lowongan'");
 				  		$pen = $getP->fetch();
 				  	?>
-				  	<div class="row">
-				  <div class="col-md-offset-2 col-md-8">
+				  	<div class="row justify-content-center">
+				  <div class="col-md-8">
 					<div class="section-heading">
 					 <h2>Detail <?php echo $pen['lowongan']; ?> </h2> 
 					</div>
@@ -146,21 +146,24 @@
 				  	}else{
 
 				  ?>
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
+
+			  <div class="row justify-content-center">
+				  <div class="col-md-8">
 					<div class="section-heading">
 					 <h2>Daftar Penerimaan</h2>
 					</div>
 				  </div>
 			  </div>
-			  <div class="row">
 
-                	<div class="col-md-offset-2 col-md-8">
+			  <div class="row justify-content-center mb-3">
+
+                	<div class="col-md-6">
                 		<input type="search" name="search" class="form-control" data-table="order-table" placeholder="Pencarian">
                 	</div>
+
                 </div>
-				<div class="row">                
-                <div class="col-md-offset-2 col-md-8">
+				<div class="row justify-content-center">                
+                <div class="col-md-8">
                 <table class="datatable-1 table table-bordered table-striped display order-table">
                 	<thead>
                 		<tr>

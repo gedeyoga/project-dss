@@ -15,24 +15,24 @@
 	  		$kuota = $ft_k['kuota'];
 	  		?>
 	  		<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
+			  <div class="row justify-content-center">
+				  <div class="col-md-8">
 					<div class="section-heading">
 					 <h2>Pengumuman Lulus <?php echo $ft_k['lowongan']; ?></h2>
 					</div>
 				  </div>
 			  </div>
-			  <div class="row">
+			  <div class="row justify-content-center">
 
-                	<div class="col-md-offset-2 col-md-8">
+                	<div class="col-md-8">
                 		<input type="search" name="search" class="form-control" data-table="order-table" placeholder="Pencarian">
                 	</div>
                 <?php
                 	$get = $hitung->GetData("where id_lowongan='$id_lowongan' order by vektor_v desc limit $kuota");
                 ?>
                 </div>
-				<div class="row">                
-                <div class="col-md-offset-2 col-md-8">
+				<div class="row justify-content-center">                
+                <div class="col-md-8">
                 <table class="datatable-1 table table-bordered table-striped display order-table">
                 	<tbody>
                 <?php
@@ -58,38 +58,36 @@
 	  ?>
 
 		<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
+			  <div class="row justify-content-center">
+				  <div class="col-md-8">
 					<div class="section-heading">
 					 <h2>Pengumuman</h2>
 					</div>
 				  </div>
 			  </div>
-			  <div class="row">
-                <div class="col-md-offset-2 col-md-8">
+			  <div class="row justify-content-center">
+                <div class="col-md-8">
 					<?php
 						$qrL = $lowongan->GetData("where status='1' and pengumuman='1'");
 					?>
 		<div class="module-body">
-			<form class="form-horizontal row-fluid" action="index.php?menu=pelamar" method="get">
+			<form action="index.php?menu=pelamar" method="get">
 				<div class="form-group">
-					<div class="col-md-offset-2 col-md-8">
 						<input type="hidden" name="page" value="pengumuman">
 						<label>Penerimaan</label>
-						<select name="penerimaan" class="form-control">
+						<select class="form-control" name="penerimaan">
 						<?php
 						while ($row = $qrL->fetch()){
 							echo "<option value='$row[id_lowongan]'>$row[lowongan]</option>";	
 						}
 						?>
 						</select>
-					</div>
-				  </div>
+				</div>
 				<input class="btn btn-primary" type="submit" value="Pilih">
 			</form>
-                </div>
-			  </div>			  
-		  </div>	  
+        </div>
+	</div>			  
+</div>	  
 	  </section>
 	  <?php
 	  }
