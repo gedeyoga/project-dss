@@ -18,7 +18,7 @@
 	<script src="../js/modernizr.custom.js"></script>
 	</head>
   <body>
-	<div class="menu-area">
+	<!-- <div class="menu-area">
 			<div id="dl-menu" class="dl-menuwrapper">
 						<button class="dl-trigger">Open Menu</button>
 						<ul class="dl-menu">
@@ -28,8 +28,34 @@
 							<li><a href="?page=pengumuman">Pengumuman</a></li>
 							<li><a href="logout_user.php">Logout</a></li>
 						</ul>
-					</div><!-- /dl-menuwrapper -->
-	</div>	
+					</div>/dl-menuwrapper -->
+
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand scroll-page" href="#">Kuvukiland Tech</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.php">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="?page=download">Download</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="?page=penerimaan">Penerimaan</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="?page=pengumuman">Pengumuman</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"href="logout_user.php">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 	<?php
 		include "page.php";
@@ -41,8 +67,24 @@
 
 	}
 	?>
+
+
+	</footer>
 	  
 	</body>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy;2022 Kuvukiland Company. All rights reserved. By <a href="http://bootstraptaste.com"></a></p>
+				</div>
+				<!-- 
+                    All links in the footer should remain intact. 
+                    Licenseing information is available at: http://bootstraptaste.com/license/
+                    You can buy this theme without footer links online at: http://bootstraptaste.com/buy/?theme=Mamba
+                -->
+			</div>
+		</div>
 
 	<!-- js -->
     <script src="../js/jquery.js"></script>
