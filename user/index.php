@@ -39,7 +39,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#intro">Home</a>
+					<a class="nav-link" href="index.php">Home</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="?page=download">Download</a>
@@ -52,9 +52,6 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link"href="logout_user.php">Logout</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#contact">Kontak</a>
 				</li>
 			</ul>
 		</div>
