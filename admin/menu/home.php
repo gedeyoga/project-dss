@@ -25,10 +25,10 @@
                                 </div>
                                 <?php
                                     //menghitung persentase lowongan yang telah diberi solusi
-                                    $qr_persen = $lowongan->GetData("where status_solusi = '1'");
-                                    $jml = $qr_persen->rowCount();
-                                    $total = $qr_p->rowCount();
-                                    $persen = round(($jml/$total) * 100,2);
+                                    // $qr_persen = $lowongan->GetData("where status_solusi = '1'");
+                                    // $jml = $qr_persen->rowCount();
+                                    // $total = $qr_p->rowCount();
+                                    // $persen = round(($jml/$total) * 100,2);
                                 ?>
                             </div>
                             <!--/#btn-controls-->

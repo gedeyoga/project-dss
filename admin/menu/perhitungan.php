@@ -157,6 +157,7 @@
 									$rowU = $qrU->fetch();
 									if ($data['id_user'] == $cek_user)
 										continue;
+										// var_dump($data['id_user']);
 									echo "<tr>
 							<td width = 10%>$no</td>
 							<td width = 75%><a target='blank' href='index.php?menu=users&detail=$data[id_user]'>$rowU[nama_lengkap]</a></td>";
