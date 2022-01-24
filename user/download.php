@@ -1,46 +1,50 @@
-<!-- intro area -->	  
+<!-- intro area -->
+
 	  <!-- About -->
-	  <section id="about" class="home-section bg-white">
+<section id="about" class="home-section bg-white">
 		<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
-					<div class="section-heading">
-					 <h2>Download</h2>
-					</div>
+
+			  <div class="row justify-content-center">
+				  <div class="col-md-6">
+            <div class="section-heading">
+              <h2>Download</h2>
+            </div>
 				  </div>
 			  </div>
-			  <div class="row">
 
-                	<div class="col-md-offset-2 col-md-8">
-                		<input type="search" name="search" class="form-control" data-table="order-table" placeholder="Pencarian">
-                	</div>
+        <!-- Search Bar -->
+			  <div class="row justify-content-center mb-3">
+          <div class="col-md-6">
+            <input type="search" name="search" class="form-control" data-table="order-table" placeholder="Pencarian">
+          </div>
                 <?php
                 	$file = new File();
                 	$get = $file->GetData("");
                 ?>
-                </div>
-				<div class="row">                
-                <div class="col-md-offset-2 col-md-8">
-                <table class="datatable-1 table table-bordered table-striped display order-table">
-                	<tbody>
-                <?php
-                	$no = 1;
-                	while($row = $get->fetch()){
-                		echo "<tr>
-                				<td width=10%>$no</td>
-                				<td width=60%>$row[nama_file]</td>
-                				<td width=30%><a href='../file/$row[file]'>$row[file]</a>
-                				</tr>";
-                		$no++;
-                	}
-                ?>
-                	</tbody>
-                </table>
-
-                </div>
-			  </div>			  
-		  </div>	  
-	  </section>
+        </div>
+          
+        <!-- Table Data -->
+				<div class="row justify-content-center">
+          <div class="col-md-8">
+            <table class="datatable-1 table table-bordered table-striped display order-table">
+              <tbody>
+                  <?php
+                    $no = 1;
+                    while($row = $get->fetch()){
+                      echo "<tr>
+                          <td width=10%>$no</td>
+                          <td width=60%>$row[nama_file]</td>
+                          <td width=30%><a href='../file/$row[file]'>$row[file]</a>
+                          </tr>";
+                      $no++;
+                    }
+                  ?>
+              </tbody>
+            </table>
+          </div>                
+        </div>			  
+	  </div>
+	</section>
 
 	  <script type="text/javascript">
 	  	(function(document) {

@@ -51,18 +51,18 @@
 	  		$rowUser = $get->fetch();
 	  	?>
 		<div class="container">
-			  <div class="row">
-				  <div class="col-md-offset-2 col-md-8">
+			  <div class="row justify-content-center">
+				  <div class="=col-md-8">
 					<div class="section-heading">
 					 <h2>Profil Saya</h2>
 					</div>
 				  </div>
 			  </div>
-			  <div class="row">
-                <div class="col-md-offset-2 col-md-8">
+			  
+			  <div class="row justify-content-center">
+                <div class="col-md-6">
 					<form class="form-horizontal" role="form" method="post" action="" enctype="multipart/form-data">
 						<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<?php
 									if($rowUser['foto']!=""){
 										echo "<img src='../upload/$rowUser[foto]' width='250px' height='250px'>";
@@ -71,49 +71,36 @@
 									}
 								?>
 					  			<center><input type="file" name="file_foto"></center>
-							</div>
 				  		</div>
 
 						<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>Nama Lengkap</label>
 					  			<input type="text" name="nama_lengkap" class="form-control" id="inputName" placeholder="Nama Lengkap" <?php echo "value = '$rowUser[nama_lengkap]'"; ?>>
-							</div>
 				  		</div>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>Alamat</label>
 					  			<textarea type="text" name="alamat" class="form-control" id="inputName" placeholder="Alamat"><?php echo $rowUser['alamat']; ?></textarea>
-							</div>
 				  		</div>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>Tempat Lahir</label>
 					  			<input type="text" name="tmp_lahir" class="form-control" id="inputName" placeholder="Tempat Lahir" <?php echo "value = '$rowUser[tempat_lahir]'"; ?>>
-							</div>
 				  		</div>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>Tanggal Lahir (yyyy-mm-dd)</label>
 					  			<input type="text" name="tgl_lahir" class="form-control" id="inputName" placeholder="Tanggal Lahir" <?php echo "value = '$rowUser[tanggal_lahir]'"; ?>>
-							</div>
 				  		</div>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>No Handphone</label>
 					  			<input type="text" name="no_hp" class="form-control" id="inputName" placeholder="No Handphone" <?php echo "value = '$rowUser[no_hp]'"; ?>>
-							</div>
 				  		</div>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>Email</label>
 					  			<input type="text" name="email" class="form-control" id="inputName" placeholder="Email" <?php echo "value = '$rowUser[email]'"; ?>>
-							</div>
 				  		</div>
 
 				  		<?php
@@ -123,7 +110,6 @@
 				  		?>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>Pendidikan</label>
 								<select name="pend" class="form-conrol">
 									<?php echo "<option value='$gelar'>$gelar</option>" ?>
@@ -133,11 +119,9 @@
 									<option value="S3">S3</option>
 								</select>
 					  			<input type="text" name="pend_jurusan" class="form-control" id="inputName" placeholder="Jurusan" <?php echo "value='$jur'"; ?>>
-							</div>
 				  		</div>
 
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 								<label>CV</label>
 								<?php
 									if($rowUser['file_cv']!=""){
@@ -145,20 +129,15 @@
 									}
 								?>
 					  			<center><input type="file" name="file_cv"></center>
-							</div>
 				  		</div>
 
 				  		<br>
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 					  			<input type="submit" name="submit" class="btn btn-primary" id="inputName" value="Simpan">
-							</div>
 							
 				  		</div>
 				  		<div class="form-group">
-							<div class="col-md-offset-2 col-md-8">
 					  			<a target="blank" <?php echo "href='../kartu.php?id_user=$id_user'"; ?> class="btn btn-success">Cetak Kartu</a>
-							</div>
 				  		</div>
 				  		
 					</form>
