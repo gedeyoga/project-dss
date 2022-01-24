@@ -58,7 +58,7 @@
 		</div>
 	</nav>
 
-	<div class="home-section">
+	<div class="minimal">
 
 	<?php
 		include "page.php";
