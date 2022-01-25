@@ -106,7 +106,7 @@ if (isset($_SESSION['user'])) {
 						</div>
 						<div class="col-md-6 col-lg-6 mt-5 mt-md-0">
 							<p class="text-justify px-5">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ex maxime, suscipit ad tempora ipsum modi voluptatibus, fugit beatae aliquam a nobis in enim unde provident, esse molestiae neque voluptates?
+								Kuvikiland adalah sebuah perusahaan yang mengelola tentang segala hal yang berhubungan dengan pembuatan web dan jaringan internet.
 							</p>
 							<p class="text-justify px-5">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ex maxime, suscipit ad tempora ipsum modi voluptatibus, fugit beatae aliquam a nobis in enim unde provident, esse molestiae neque voluptates?
