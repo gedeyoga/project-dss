@@ -297,7 +297,7 @@
 										<td><?= $k['kriteria'] ?></td>
 										<td><?= $k['nilai'] ?></td>
 										<td><?= $arBB[$ib] ?></td>
-										<td><?= $vkt_s ?></td>
+										<td><?= round($pgkt , 4) ?></td>
 									</tr>
 								<?php
 									// echo $k['kriteria'] . " dengan nilai " . $k['nilai'] . " dipangkat dengan bobot " . $arBB[$ib] . "<br>";
