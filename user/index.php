@@ -58,7 +58,7 @@
 		</div>
 	</nav>
 
-	<div class="home-section">
+	<div class="minimal">
 
 	<?php
 		include "page.php";
@@ -77,7 +77,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p>Copyright &copy;2022 Kuvukiland Company. All rights reserved. By <a href="http://bootstraptaste.com"></a></p>
+					<p>Copyright &copy;2022 Kuvukiland Company. All rights reserved.</p>
 				</div>
 				<!-- 
                     All links in the footer should remain intact. 

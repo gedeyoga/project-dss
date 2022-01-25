@@ -106,7 +106,7 @@ if (isset($_SESSION['user'])) {
 						</div>
 						<div class="col-md-6 col-lg-6 mt-5 mt-md-0">
 							<p class="text-justify px-5">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ex maxime, suscipit ad tempora ipsum modi voluptatibus, fugit beatae aliquam a nobis in enim unde provident, esse molestiae neque voluptates?
+								Kuvukiland adalah sebuah perusahaan yang mengelola tentang segala hal yang berhubungan dengan pembuatan web dan jaringan internet.
 							</p>
 							<p class="text-justify px-5">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ex maxime, suscipit ad tempora ipsum modi voluptatibus, fugit beatae aliquam a nobis in enim unde provident, esse molestiae neque voluptates?
@@ -281,7 +281,7 @@ if (isset($_SESSION['user'])) {
 				<div class="col-md-8">
 					<div class="section-heading">
 						<h2>Hubungi Kami</h2>
-						<p>Contact via form below and we will be get in touch with you within 24 hours. </p>
+						<p>Hubungi kami melalui form dibawah, kami akan membalas dalam 24 jam. </p>
 					</div>
 				</div>
 			</div>
@@ -302,14 +302,14 @@ if (isset($_SESSION['user'])) {
 							<textarea name="message" class="form-control" rows="3" placeholder="Message"></textarea>
 						</div>
 						<div class="form-group">
-							<button type="button" class="btn btn-theme btn-lg btn-block">Send message</button>
+							<button type="button" class="btn btn-theme btn-lg btn-block">Kirim pesan</button>
 						</div>
 					</form>
 				</div>
 			</div>
 			<div class="row justify-content-center mt-5">
 				<div class="col-md-8">
-					<h5>We're on social networks</h5>
+					<h5>Media sosial kami</h5>
 					<ul class="social-network">
 						<li><a href="#">
 							<span class="fa-stack fa-2x">
@@ -329,10 +329,10 @@ if (isset($_SESSION['user'])) {
 								<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 							</span></a>
 						</li>
-						<li><a href="#">
+						<li><a href="https://www.youtube.com/watch?v=iik25wqIuFo">
 							<span class="fa-stack fa-2x">
 								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+								<i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
 							</span></a>
 						</li>
 					</ul>
@@ -422,7 +422,7 @@ if (isset($_SESSION['user'])) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p>Copyright &copy;2014 Mamba company. All rights reserved. By <a href="http://bootstraptaste.com">Bootstrap Themes</a></p>
+					<p>Copyright &copy;2022 Kuvukiland Company. All rights reserved.</p>
 				</div>
 				<!-- 
                     All links in the footer should remain intact. 
